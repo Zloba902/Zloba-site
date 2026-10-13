@@ -1,0 +1,134 @@
+body {
+  color: rgb(249, 248, 248);
+  background-color: rgba(32, 32, 32, 0.500);
+  font-family: 'MyCustomFont';
+  font-size: 8px;
+  font-size: 10px;
+}
+
+
+
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('../fonts/alagard-12px-unicode.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+#header {
+  text-align: center;
+  font-size: 8px;
+}
+
+#wrapper-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0px;
+  font-size: 30px;
+}
+
+.box-right #milk-chan-1 {
+  padding-top: 10px;
+}
+
+.box-right {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  font-size: 10px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(163, 31, 31, 0.2));
+  border: 1px solid rgba(151, 100, 100, 0.4);
+  backdrop-filter: blur(1px);
+  gap: 20px;
+}
+
+#info {
+  display: flex;
+  flex-direction: column;
+}
+
+#info-gif {
+  padding: 20px 0px 20px 20px;
+  width: 200px;
+  height: 200px;
+  align-items: center;
+}
+
+
+#box-left {
+  text-align: center;
+
+}
+
+
+
+#button-box {
+  padding: 0px 25px 0px 25px;
+
+}
+
+::-webkit-scrollbar {
+  width: 1px;
+  height: 1px;
+}
+
+#guestbook-box {
+  text-align: center;
+  backdrop-filter: blur(3px);
+  border: 01px solid rgba(114, 113, 113, 0.12);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.200), rgba(134, 129, 129, 0.132));
+  display: flex;
+  align-items: center;
+  gap: 0px;
+  margin: 0px;
+  padding: 10px;
+  font-size: 9px;
+}
+
+#news-title {
+  padding-top: 20px;
+  text-align: center;
+  backdrop-filter: blur(2px);
+}
+
+
+#news-box {
+  font-size: 9px;
+  backdrop-filter: blur(10px);
+  border: 1px solid;
+  border-image: linear-gradient(135deg,
+      #5858ad 0%,
+      #9900ff 25%,
+      #222 50%,
+      #cc00ff 75%,
+      #ea03f6 100%) 1;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.news {
+  color: rgb(255, 255, 255);
+  padding-left: 20px;
+}
+
+ul {
+  list-style: url("/assets/image/star.gif");
+  margin: 0px 0px 10px 0px;
+
+}
+
+h2 {
+  margin: 0px 0px 0px 0px;
+  font-size: 12px;
+}
+
+p {
+  padding-left: 20px;
+}
+
+a {
+   text-decoration: none;
+   color: #b103f6;
+}

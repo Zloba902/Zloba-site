@@ -1,0 +1,176 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+
+body {
+  background-color: rgba(23, 23, 23, 0.709);
+  color: #f2f6ff;
+  background-image: url('../images/bg_diamond.png');
+	background-position: top;
+  font-size: 10px;
+    backdrop-filter: blur(10px);
+  
+   /* Уменьшит разрыв (стандартное значение обычно около 1.4–1.6) */
+
+  font-family: 'MyCustomFont';
+  margin: 0;
+}
+
+@font-face {
+  font-family: 'MyCustomFont';
+  /* Задайте имя шрифту */
+  src: url('../fonts/alagard-12px-unicode.woff2') format('woff2');
+  /* Путь к файлу */
+  font-weight: 600;
+  
+  /* Толщина шрифта */
+  font-style: 10px;
+  /* Стиль (обычный или курсив) */
+}
+
+
+
+hr {
+  border: solid #c7b591;
+  border-width: 2px 0 0 0;
+}
+
+img {
+     display: block;       /* Превращаем в блок */
+  margin-left: auto;    /* Авто-отступ слева */
+  margin-right: auto; 
+}
+.right {
+  float: right;
+  margin-left: 1em;
+}
+.left {
+  float: left;
+  margin-right: 1em;
+}
+.center {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+@media only screen and (min-width: 600px) {
+  .small {
+    max-width: 60%;
+    height: auto;
+  }
+}
+.caption {
+  margin-top: 0;
+  font-size: 10px;
+  font-style: italic;
+}
+
+a{
+
+ transition: padding-left 0.2s ease-in; 
+}
+
+a:hover { 
+  background-color: #fff6e6;
+  padding-left: 50px;
+}
+
+h1, h2, h3, h4, h5 {
+  
+  color: #f2f6ff;
+}
+
+h4{
+
+  text-align: center;
+}
+
+
+/*#CONTAINER is the rectangle that contains everything but the background!*/
+#container {
+  margin: 3em auto;
+  width: 90%;
+	
+	background-color: #fff4df00;
+  color: #fdfcfc; 
+  outline-style: ridge;
+  outline-width: 0px;
+  outline-offset: 0;
+}
+
+#content {
+  padding: 10px 5% 20px 5%;
+}
+
+
+/*HEADER STYLE*/
+#header {
+  background-color: #999ca700;
+  padding: 0 5%;
+  border-style: ridge;
+  border-width: 0 0 4px 0;
+}
+#header ul {
+  list-style-type: none;
+  padding: 0.5em 0;
+  margin: 0;
+}
+#header li {
+  font-size: 8px ;
+  display: inline-block;
+  margin-right: 1.5em;
+  margin-bottom: 0.2em;
+  margin-top: 0.2em;
+}
+#header li a {
+  color: white;
+  text-decoration: none;
+  background-color: inherit;
+}
+#header li a:hover {
+  text-decoration: underline;
+  transform: scale(1.2);
+}
+
+/*POST LIST STYLE*/
+#postlistdiv ul {
+  font-size: 1.2em;
+  padding: 0;
+  list-style-type: none;
+}
+
+
+  
+
+
+#recentpostlistdiv ul {
+  font-size: 1.2em;
+  padding: 0;
+  list-style-type: none;
+ 
+}
+
+
+
+.moreposts {
+  font-size: 0.8em;
+  margin-top: 0.2em;
+}
+
+/*NEXT AND PREVIOUS LINKS STYLE*/
+#nextprev {
+  text-align: center;
+  margin-top: 1.4em;
+}
+
+/*DISQUS STYLE*/
+#disqus_thread {
+  margin-top: 1.6em;
+}
+
+/*FOOTER STYLE*/
+#footer {
+  font-size: 0.8em;
+  padding: 0 5% 10px 5%;
+}

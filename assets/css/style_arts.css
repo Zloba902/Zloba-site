@@ -1,0 +1,46 @@
+body {
+  color: rgb(249, 248, 248);
+  background-color: rgba(32, 32, 32, 0.500);
+  font-family: 'MyCustomFont';
+  backdrop-filter: blur(10px);
+
+}
+#header {
+  text-align: center;
+
+}
+
+.galery{
+  display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Расстояние между картинками */
+    justify-content: center;
+}
+
+.galery img{
+    width: 200px;  
+    height: 200px;
+    object-fit: cover; 
+    border: 1px solid #ccc;
+
+    transition: transform 0.2s
+}
+
+.galery img:hover{
+    transform: scale(1.20);
+    border-color: #666;
+}
+
+dialog {
+  border: none;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.8);
+  max-width: 90vw;
+  max-height: 90vh;
+  z-index: 99999; 
+}
+dialog img {
+  display: block;
+  max-width: 100%;
+  max-height: 90vh;
+}
