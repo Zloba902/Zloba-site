@@ -58,4 +58,4 @@
         create_spak();
         animate();
         
-    setInterval(create_spak, 120);
+    setInterval(create_spak, 100);

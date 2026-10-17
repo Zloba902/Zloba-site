@@ -8,6 +8,7 @@ body {
 }
 
 
+
 @font-face {
   font-family: 'MyCustomFont';
   src: url('../fonts/alagard-12px-unicode.woff2') format('woff2');
@@ -39,9 +40,6 @@ body {
   align-items: center;
 
 }
-
-
-
 
 #daily-lines {
   padding: 0px;
@@ -96,6 +94,9 @@ iframe {
 
 }
 
+
+
+
 #nav-title {
   font-family: MyCustomFont-2;
   font-size: 35px;
@@ -107,20 +108,14 @@ iframe {
 
 
 #navigation {
-  position: relative; 
+  position: relative;
   text-align: center;
-  width: 15%;
+  width: 17%;
   border: 1px solid rgba(255, 255, 255, 0.3);
   overflow: hidden;
 }
 
-.circle {
-  position: absolute;
-  border: 1px solid;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  transition: top 0.1s ease-out, left 0.1s ease-out;
-}
+
 
 
 ul {
@@ -145,6 +140,7 @@ nav a {
 .nav-button {
   font-size: 10px;
   display: flex;
+  align-items: center;
 
   margin: 2px 2px 2px 2px;
   padding: 3px 3px 3px 3px;
@@ -161,12 +157,12 @@ nav a {
 }
 
 .nav-icon {
-  width: 30px;
-  /* Задайте размер вашего диска */
-  height: 30px;
+  width: 22px;
+  display: none;
+  height: 22px;
   text-align: left;
-  margin-right: 10px;
-  margin-left: -40px;
+  margin-right: 5px;
+  margin-left: 5px;
 }
 
 .line-icon {
@@ -180,27 +176,31 @@ nav a {
 
 }
 
+.nav-button:hover .nav-icon {
+  display: inline;
+
+}
+
 @keyframes mouse-in {
   from {
-    background-color: rgb(255, 253, 253);
+    background-color: rgba(141, 11, 255, 0.396);
+
   }
 
   to {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(208, 0, 255, 0.2);
     backdrop-filter: blur(10px);
-    padding-left: 50px;
+    padding-left: 10px;
   }
 
 }
 
 @keyframes mouse-out {
   0% {
-    padding-left: 50px;
+    padding-left: 25px;
   }
 
-  100% {
-    padding-left: -40px;
-  }
+  100% {}
 }
 
 a {

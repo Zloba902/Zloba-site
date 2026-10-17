@@ -1,4 +1,6 @@
 
+
+
 var i = 0;
 var txt = "";
 var speed = 50;
@@ -37,20 +39,4 @@ function openModal(src, time, des) {
     modal.showModal();
 }
 
-
-
-
-const box = document.getElementById('navigation');
-const circle = document.getElementById('follower');
-
-box.addEventListener('mousemove', (e) => {
-    // Получаем координаты коробки на экране
-    const rect = box.getBoundingClientRect();
-
-    // Вычисляем координаты мыши относительно левого верхнего угла коробки
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    circle.style.top = `${y}px`;
-});
 
