@@ -20,6 +20,6 @@ jobs:
         dist_dir: .
         protected_files: |
           .git/**
-          README.md
+
 
 
