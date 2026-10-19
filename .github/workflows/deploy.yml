@@ -18,3 +18,6 @@ jobs:
         api_token: ${{ secrets.NEOCITIES_API_KEY }}
         cleanup: true
         dist_dir: .
+
+
+
