@@ -1,0 +1,24 @@
+name: Deploy to Neocities
+
+# Скрипт запускается при каждом пуше в ветку main (или master)
+on:
+  push:
+    branches:
+      - main 
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. Скачиваем актуальный код из репозитория
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    # 2. Загружаем файлы на Neocities
+    - name: Deploy to Neocities
+      uses: neocities/deploy-action@v1.2.3
+      with:
+        api_key: ${{ secrets.NEOCITIES_API_KEY }}
+        cleanup: true # Удалит на Neocities те файлы, которых больше нет в вашем репозитории
+        # dist_dir: . # Укажите папку, если ваш сайт собирается в отдельную директорию (например, dist или public)
