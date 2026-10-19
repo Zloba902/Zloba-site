@@ -17,7 +17,7 @@ jobs:
 
     # 2. Загружаем файлы на Neocities
     - name: Deploy to Neocities
-      uses: neocities/deploy-action@v3
+      uses: bcomnes/deploy-to-neocities@v1
       with:
         api_key: ${{ secrets.NEOCITIES_API_KEY }}
         cleanup: true # Удалит на Neocities те файлы, которых больше нет в вашем репозитории
