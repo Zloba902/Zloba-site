@@ -2,19 +2,9 @@ body {
   background-color: rgb(8, 8, 8);
   background-image: url('/assets/image/tower-99.jpg');
   color: rgb(253, 247, 247);
-  font-family: 'MyCustomFont';
   background-size: cover;
-  font-size: 10px;
 }
 
-@font-face {
-  font-family: 'MyCustomFont';
-  src: url('../fonts/alagard-12px-unicode.woff2') format('woff2');
-  font-weight: 100;
-
-  font-style: normal;
-  /* Стиль (обычный или курсив) */
-}
 
 
 #main{
@@ -61,7 +51,7 @@ padding-left: 20px;
 }
 
 #box-right{
- display: flex;
+  display: flex;
   width: 100%;
   gap: 30px;
   text-align: left;
@@ -70,10 +60,25 @@ padding-left: 20px;
 }
 
 
+#stat-box{
+  border: 1px solid;
+  border-image: linear-gradient(135deg,
+      #5b5738 0%,
+      #fbffca 25%,
+      #222 50%,
+      #c7ffb4 75%,
+      #6e602e 100%) 1;
+  padding: 15px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+p {
+  display: flex;
+  gap: 8px;
+}
 
 
 #header1{
-
 text-align: center;
 }
 

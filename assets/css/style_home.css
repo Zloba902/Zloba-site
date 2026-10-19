@@ -1,19 +1,4 @@
-body {
-  color: rgb(249, 248, 248);
-  background-color: rgba(32, 32, 32, 0.500);
-  font-family: 'MyCustomFont';
-  font-size: 8px;
-  font-size: 10px;
-}
 
-
-
-@font-face {
-  font-family: 'MyCustomFont';
-  src: url('../fonts/alagard-12px-unicode.woff2') format('woff2');
-  font-weight: 600;
-  font-style: normal;
-}
 
 #header {
   text-align: center;
@@ -30,6 +15,8 @@ body {
 
 .box-right #milk-chan-1 {
   padding-top: 10px;
+  float: left; 
+  margin: 0 0 10px 20px;
 }
 
 .box-right {
@@ -52,7 +39,7 @@ body {
   padding: 20px 0px 20px 20px;
   width: 200px;
   height: 200px;
-  align-items: center;
+  float: left; 
 }
 
 

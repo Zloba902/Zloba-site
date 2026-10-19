@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="/assets/css/style.css">
   <meta charset="UTF-8">
 </head>
+<body>
 <div id=main-box>
   <div id="header">
     ZLoba knight heaven
@@ -46,6 +47,12 @@
           Arts
         </div>
       </a>
+      <a href="links.html" target="frame">
+        <div class="nav-button">
+          <img src="/assets/image/i-11.gif" class="nav-icon">
+          Links
+        </div>
+      </a>
       <a href="about.html" target="frame">
         <div class="nav-button">
           <img src="/assets/image/i-11.gif" class="nav-icon">
@@ -66,13 +73,34 @@
     </iframe>
 
     <div id="box-right">
-      <div id="app"></div>
+      <div id="app" style="height: 100vh; position: relative"></div>
       <div id="webring"></div>
     </div>
 
   </div>
 </div>
+
 <script src="/assets/scripts/script_main.js"></script>
+<script type="module">
+
+  import Webamp from "https://unpkg.com/webamp@^2/butterchurn";
+  const webamp = new Webamp({
+    initialTracks: [
+      {
+        metaData: {
+          artist: "???",
+          title: "i think i love you 2",
+        },
+        // NOTE: Your audio file must be served from the same domain as your HTML
+        // file, or served with permissive CORS HTTP headers:
+        // https://docs.webamp.org/docs/guides/cors
+        url: "https://file.garden/atWE_KEZunvJtot9/i%20think%20i%20love%20you%202%20%5BfwI8Q1Dn35Q%5D.mp3"
+      }
+    ],
+  });
+
+  webamp.renderInto(document.getElementById("app"));
+</script>
 
 </body>
 
