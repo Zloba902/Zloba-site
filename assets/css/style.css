@@ -1,26 +1,10 @@
 body {
   background-color: rgb(23, 23, 23);
   color: rgb(249, 248, 248);
-  background-image: url('/assets/image/ro.jpg');
-  background-size: cover;
-  font-family: 'MyCustomFont';
+  background-image: url('/assets/image/purplerosesblkbg.gif');
+ 
+  font-family: 'Alagard-12';
 
-}
-
-
-
-@font-face {
-  font-family: 'MyCustomFont';
-  src: url('../fonts/alagard-12px-unicode.woff2') format('woff2');
-  font-weight: 800;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'MyCustomFont-2';
-  src: url('../fonts/minster4.woff2') format('woff2');
-  font-weight: 800;
-  font-style: normal;
 }
 
 #wrapper-box {
@@ -54,23 +38,14 @@ body {
 
 }
 
-
-
-
 #header {
   text-align: center;
-  font-family: MyCustomFont-2;
+  font-family: Minster4;
   font-size: 100px;
-
-
 }
 
-
-
-
-
 iframe {
-  width: 110%;
+  width: 100%;
   border: 1px solid;
   border-image: linear-gradient(135deg,
       #555 0%,
@@ -78,7 +53,6 @@ iframe {
       #222 50%,
       #fff 75%,
       #555 100%) 1;
-
 }
 
 ::-webkit-scrollbar {
@@ -89,8 +63,15 @@ iframe {
 #box-right {
   display: flex;
   flex-direction: column;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  width: 25%;
+  border: 1px solid;
+  border-image: linear-gradient(135deg,
+      #555 0%,
+      #fff 25%,
+      #222 50%,
+      #fff 75%,
+      #555 100%) 1;
+  /* Металлический кант */
+
 
 }
 
@@ -98,7 +79,7 @@ iframe {
 
 
 #nav-title {
-  font-family: MyCustomFont-2;
+  font-family: Minster4;
   font-size: 35px;
   backdrop-filter: blur(10px);
   background: rgba(0, 0, 0, 0.087);
@@ -107,11 +88,37 @@ iframe {
 }
 
 
+.winamp-container {
+  width: 275px;
+  height: 340px;
+  position: relative;
+  overflow: hidden; 
+  box-sizing: border-box;
+}
+
+#app {
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+
 #navigation {
   position: relative;
   text-align: center;
   width: 17%;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid;
+  border-image: linear-gradient(135deg,
+      #555 0%,
+      #fff 25%,
+      #222 50%,
+      #fff 75%,
+      #555 100%) 1;
+  /* Металлический кант */
   overflow: hidden;
 }
 
@@ -153,7 +160,6 @@ nav a {
   border-bottom: 1px solid rgba(80, 80, 80, 0.070);
   background: rgba(0, 0, 0, 0.087);
   animation: mouse-out 0.5s ease;
-
 }
 
 .nav-icon {

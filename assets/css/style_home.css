@@ -1,33 +1,36 @@
 
+body{
+background-image: url("/assets/image/12.png");
+
+}
 
 #header {
   text-align: center;
   font-size: 8px;
 }
 
-#wrapper-box {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 0px;
-  font-size: 30px;
-}
 
-.box-right #milk-chan-1 {
+
+.box #milk-chan-1 {
   padding-top: 10px;
   float: left; 
   margin: 0 0 10px 20px;
 }
 
-.box-right {
+.box {
   display: flex;
   align-items: center;
   flex-direction: row;
-  font-size: 10px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(163, 31, 31, 0.2));
-  border: 1px solid rgba(151, 100, 100, 0.4);
-  backdrop-filter: blur(1px);
-  gap: 20px;
+  font-size: 9px;
+  background-color: #1b0101;
+  border: 1px solid;
+  border-image: linear-gradient(135deg,
+      #555 0%,
+      #fff 25%,
+      #222 50%,
+      #fff 75%,
+      #555 100%) 1;/* Металлический кант */
+  position: relative;
 }
 
 #info {
@@ -80,25 +83,25 @@
 }
 
 
-#news-box {
-  font-size: 9px;
-  backdrop-filter: blur(10px);
-  border: 1px solid;
+
+.news {
+  color: rgb(255, 255, 255);
+  height: 200px;
+  width: 100%;
+  padding-left: 20px;
+  overflow: auto;  
+  border: 2px solid;
   border-image: linear-gradient(135deg,
       #5858ad 0%,
       #9900ff 25%,
       #222 50%,
       #cc00ff 75%,
-      #ea03f6 100%) 1;
-  display: flex;
-  flex-direction: column;
+      #ea03f6 100%) 2;
+  font-size: 9px;
+  backdrop-filter: blur(10px);
 }
 
 
-.news {
-  color: rgb(255, 255, 255);
-  padding-left: 20px;
-}
 
 ul {
   list-style: url("/assets/image/star.gif");

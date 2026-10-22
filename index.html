@@ -2,106 +2,96 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/style.css">
   <meta charset="UTF-8">
 </head>
+  
+
 <body>
-<div id=main-box>
-  <div id="header">
-    ZLoba knight heaven
-  </div>
-  <div id="lines-box">
-    <img class="line-icon" src="/assets/image/orange.gif" alt="">
-    <div id="daily-lines"> текст </div>
-  </div>
+  <div id=main-box>
+     <img src="/assets/image/onewingedangel.gif" id="ofa"
+class="draggable">
 
-  <div id="wrapper-box">
-    <nav id="navigation">
-      <div id="nav-title">
-        <h2>Navigation</h2>
-      </div>
-
-
-
-      <a href="heaven.html" target="frame">
-        <div class="nav-button">
-          <img src="/assets/image/i-11.gif" class="nav-icon">
-          Heaven
-        </div>
-      </a>
-      <a href="index.html">
-        <div class="nav-button">
-          <img src="/assets/image/i-11.gif" class="nav-icon">
-          Home
-        </div>
-      </a>
-      <a href="blog.html" target="frame">
-        <div class="nav-button">
-          <img src="/assets/image/i-11.gif" class="nav-icon">
-          Blog
-        </div>
-      </a>
-      <a href="arts.html" target="frame">
-        <div class="nav-button">
-          <img src="/assets/image/i-11.gif" class="nav-icon">
-          Arts
-        </div>
-      </a>
-      <a href="links.html" target="frame">
-        <div class="nav-button">
-          <img src="/assets/image/i-11.gif" class="nav-icon">
-          Links
-        </div>
-      </a>
-      <a href="about.html" target="frame">
-        <div class="nav-button">
-          <img src="/assets/image/i-11.gif" class="nav-icon">
-          About
-        </div>
-      </a>
-
-      <a href="https://zloba602.neocities.org/">
-        <div id="button">
-          <img src="/assets/image/button-test.gif" alt="">
-        </div>
-      </a>
-
-
-    </nav>
-
-    <iframe src="home.html" id="main-frame" width="600" height="1000" name="frame">
-    </iframe>
-
-    <div id="box-right">
-      <div id="app" style="height: 100vh; position: relative"></div>
-      <div id="webring"></div>
+    <div id="header">
+      ZLoba knight heaven
+    </div>
+    <div id="lines-box">
+      <img class="line-icon" src="/assets/image/orange.gif" alt="">
+      <div id="daily-lines"> текст </div>
     </div>
 
+    <div id="wrapper-box">
+      <nav id="navigation">
+        <div id="nav-title">
+          <h2>Navigation</h2>
+        </div>
+
+
+
+        <a href="heaven.html" target="frame">
+          <div class="nav-button">
+            <img src="/assets/image/i-11.gif" class="nav-icon">
+            Heaven
+          </div>
+        </a>
+        <a href="index.html">
+          <div class="nav-button">
+            <img src="/assets/image/i-11.gif" class="nav-icon">
+            Home
+          </div>
+        </a>
+        <a href="blog.html" target="frame">
+          <div class="nav-button">
+            <img src="/assets/image/i-11.gif" class="nav-icon">
+            Blog
+          </div>
+        </a>
+        <a href="arts.html" target="frame">
+          <div class="nav-button">
+            <img src="/assets/image/i-11.gif" class="nav-icon">
+            Arts
+          </div>
+        </a>
+        <a href="links.html" target="frame">
+          <div class="nav-button">
+            <img src="/assets/image/i-11.gif" class="nav-icon">
+            Links
+          </div>
+        </a>
+        <a href="about.html" target="frame">
+          <div class="nav-button">
+            <img src="/assets/image/i-11.gif" class="nav-icon">
+            About
+          </div>
+        </a>
+
+        <a href="https://zloba602.neocities.org/">
+          <div id="button">
+            <img src="/assets/image/button-test.gif" alt="">
+          </div>
+        </a>
+
+
+      </nav>
+
+      <iframe src="home.html" id="main-frame" width="600" height="1300px" name="frame">
+      </iframe>
+
+      <div id="box-right">
+        <div class="winamp-container">
+          <div id="app"></div>
+        </div>
+        <div id="webring"></div>
+
+      </div>
+
+    </div>
   </div>
-</div>
-
-<script src="/assets/scripts/script_main.js"></script>
-<script type="module">
-
-  import Webamp from "https://unpkg.com/webamp@^2/butterchurn";
-  const webamp = new Webamp({
-    initialTracks: [
-      {
-        metaData: {
-          artist: "???",
-          title: "i think i love you 2",
-        },
-        // NOTE: Your audio file must be served from the same domain as your HTML
-        // file, or served with permissive CORS HTTP headers:
-        // https://docs.webamp.org/docs/guides/cors
-        url: "https://file.garden/atWE_KEZunvJtot9/i%20think%20i%20love%20you%202%20%5BfwI8Q1Dn35Q%5D.mp3"
-      }
-    ],
-  });
-
-  webamp.renderInto(document.getElementById("app"));
-</script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/interact.js/1.10.17/interact.min.js"></script>
+  <script src="/assets/scripts/script_main.js"></script>
+  <script src="/assets/scripts/script_music.js" type="module"> </script>
+ 
 </body>
 
 <dialog id="modal-window-image" onclick="this.close()">
