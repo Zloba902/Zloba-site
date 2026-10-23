@@ -67,7 +67,15 @@ const webamp = new Webamp({
                 title: "The Bohemian Library",
             },
             url: "https://file.garden/atWE_KEZunvJtot9/Black%20Souls%20-%20Name%2C%20Alice%20%5Bt0nrfxFIPpg%5D.mp3",
-
+            
+        },
+        {
+            metaData: {
+                artist: "shiftyz",
+                title: "Temporary",
+            },
+            url: "https://file.garden/atWE_KEZunvJtot9/Temporary%20%5B7Xg6RNI3yk0%5D.mp3",
+            
         },
         {
             metaData: {
@@ -111,10 +119,82 @@ const webamp = new Webamp({
         },
         {
             metaData: {
+                artist: "GAKHED",
+                title: "we still have so much time",
+            },
+            url: "https://file.garden/atWE_KEZunvJtot9/we%20still%20have%20so%20much%20time%20%5BP0VwQrCAAbc%5D.mp3",
+
+        },
+        {
+            metaData: {
                 artist: "Reminor band",
                 title: "Город",
             },
             url: "https://file.garden/atWE_KEZunvJtot9/%D0%93%D0%BE%D1%80%D0%BE%D0%B4%20%5BTxOlKi-9nFU%5D.mp3",
+
+        },
+           {
+            metaData: {
+                artist: "Sad-artist",
+                title: "credits song for my death remix",
+            },
+            url: "https://file.garden/atWE_KEZunvJtot9/past%20the%20credits%20%EF%BD%9C%EF%BD%9C%20credits%20song%20for%20my%20death%20remix%20%5BrQrCIxzIgs0%5D.mp3",
+
+        },
+           {
+            metaData: {
+                artist: "breakcore gir и lKarōshi",
+                title: "anybody can find love (except you.) (breakcore, slowed + reverb instrumental)",
+            },
+            url: "https://file.garden/atWE_KEZunvJtot9/anybody%20can%20find%20love%20(except%20you.)%20(breakcore%2C%20slowed%20%2B%20reverb%20instrumental)%20%5BqAfI5E4p6mA%5D.mp3",
+
+        },
+         {
+            metaData: {
+                artist: "Omo the Maid",
+                title: "Werewolf - Beatdown Competition",
+            },
+            url: "https://file.garden/atWE_KEZunvJtot9/Werewolf%20-%20Beatdown%20Competition%20%5B2062526712%5D.mp3",
+
+        },
+          {
+            metaData: {
+                artist: "Yakui The Maid",
+                title: "Bring Me The #2007",
+            },
+            url: "https://file.garden/atWE_KEZunvJtot9/Yakui%20The%20Maid%20-%20Bring%20Me%20The%20%232007%20%5B1214473294%5D.mp3",
+
+        },
+          {
+            metaData: {
+                artist: "Dorei The Maid",
+                title: "Painful And Sad",
+            },
+            url: "https://file.garden/atWE_KEZunvJtot9/Dorei%20The%20Maid%20-%20Painful%20And%20Sad%20%5B1599359625%5D.mp3",
+
+        },
+          {
+            metaData: {
+                artist: "Village (Remake)",
+                title: "Komak The Maid",
+            },
+            url: "https://file.garden/atWE_KEZunvJtot9/Village%20(Remake)%20%5B1523262772%5D.mp3",
+
+        },
+        {
+            metaData: {
+                artist: "Dracodraco",
+                title: "Freefall",
+            },
+            url: "https://file.garden/atWE_KEZunvJtot9/Dracodraco%20-%20Freefall%20%5B1786209753%5D.mp3",
+
+        },
+        {
+            metaData: {
+                artist: "Doodles",
+                title: "CASTLE VEIN (COVER) ⧸⧸⧸ CHILD OF BLASPHEMY Feat. Kasane Teto ",
+            },
+            url: "https://file.garden/atWE_KEZunvJtot9/CASTLE%20VEIN%20(COVER)%20%E2%A7%B8%E2%A7%B8%E2%A7%B8%20CHILD%20OF%20BLASPHEMY%20Feat.%20Kasane%20Teto%20%5BthXUHWEJLYU%5D.mp3",
 
         },
     ]

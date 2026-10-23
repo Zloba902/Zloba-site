@@ -42,8 +42,10 @@ function openModal(src, time, des) {
 
 interact('.draggable')
   .draggable({
+    ignoreFrom: '#app, #app *', 
     listeners: {
       // when a user drags the object ('on dragmove') run this function
+      
       move: dragMoveListener,
       // call this function on every dragend event
       end (event) {
