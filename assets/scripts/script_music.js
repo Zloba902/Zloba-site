@@ -25,9 +25,7 @@ const webamp = new Webamp({
         },
     }, 
 
-     initialSkin: {
-          url: "https://file.garden/atWE_KEZunvJtot9/Kohime%20Ouse%20-%20Kaleidoscope.wsz",
-        },
+     
     initialTracks: [
         {
             metaData: {

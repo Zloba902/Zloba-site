@@ -1,37 +1,12 @@
-.link_button {}
 
 .link_button img {
     display: inline-block;
     margin: 4px;
     animation: transform 0.2s ease-in-out;
-
 }
 
 
 .link_button:hover img {
     transform: scale(1.05) rotate(-10deg);
-    ;
-
 }
 
-.box-column {
-    background-color: rgba(137, 43, 226, 0.216);
-    display: grid;
-    grid-template-columns: 100px 1fr;
-    /* 3 колонки */
-    grid-template-rows: auto auto auto;
-    /* 2 строки */
-    border: 1px solid;
-    border-image: linear-gradient(135deg,
-            #485b38 0%,
-            #f7d9d9 20%,
-            #222 50%,
-            #939393 75%,
-            #b7b8b8 100%) 1;
-    padding: 10px;
-}
-
-a {
-    text-decoration: none;
-    color: #b701fe;
-}

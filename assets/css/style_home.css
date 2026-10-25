@@ -9,28 +9,10 @@ background-image: url("/assets/image/12.png");
   font-size: 8px;
 }
 
-
-
 .box #milk-chan-1 {
   padding-top: 10px;
   float: left; 
   margin: 0 0 10px 20px;
-}
-
-.box {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  font-size: 9px;
-  background-color: #1b0101;
-  border: 1px solid;
-  border-image: linear-gradient(135deg,
-      #555 0%,
-      #fff 25%,
-      #222 50%,
-      #fff 75%,
-      #555 100%) 1;/* Металлический кант */
-  position: relative;
 }
 
 #info {

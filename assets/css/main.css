@@ -19,7 +19,31 @@ body {
   font-style: normal;
 }
 
+/*Уникальные */
 
+#ofa{
+  position: absolute;
+  left: 100px;
+  top: 130px;
+  z-index: 1;
+}
+
+#neco1{
+  position: absolute;
+  left: 80%;
+  top: 145px;
+  z-index: 1;
+}
+
+#neco2{
+  position: absolute;
+  left: 85%;
+  top: 155px;
+  z-index: 1;
+}
+
+
+/*Общие*/
 
 .main-box{
  padding: 10px 15px 15px 15px;
@@ -33,13 +57,47 @@ body {
   display: flex;
   flex-direction: row;
   gap: 20px;
-  padding: 15px;
-  
+  width: 100%;
+  padding-top: 15px;
 }
 
-#ofa{
-  position: absolute;
-  left: 100px;
-  top: 130px;
-  z-index: 1;
+
+.box {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  font-size: 9px;
+  background-color: #1b0101;
+  border: 1px solid;
+  border-image: linear-gradient(135deg,
+      #555 0%,
+      #fff 25%,
+      #222 50%,
+      #fff 75%,
+      #555 100%) 1;
+  position: relative;
+}
+
+.box-grid {
+    background-color: rgba(137, 43, 226, 0.216);
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    /* 3 колонки */
+    grid-template-rows: auto auto auto;
+    /* 2 строки */
+    border: 1px solid;
+    border-image: linear-gradient(135deg,
+            #485b38 0%,
+            #f7d9d9 20%,
+            #222 50%,
+            #939393 75%,
+            #b7b8b8 100%) 1;
+    padding: 10px;
+}
+
+
+
+a {
+  color: #ff5733;         /* Изменяет цвет ссылки */
+  text-decoration: none;  /* Убирает подчеркивание */
 }
