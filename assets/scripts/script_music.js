@@ -171,14 +171,7 @@ const webamp = new Webamp({
             url: "https://file.garden/atWE_KEZunvJtot9/Dorei%20The%20Maid%20-%20Painful%20And%20Sad%20%5B1599359625%5D.mp3",
 
         },
-          {
-            metaData: {
-                artist: "Village (Remake)",
-                title: "Komak The Maid",
-            },
-            url: "https://file.garden/atWE_KEZunvJtot9/Village%20(Remake)%20%5B1523262772%5D.mp3",
-
-        },
+      
         {
             metaData: {
                 artist: "Dracodraco",
@@ -193,6 +186,14 @@ const webamp = new Webamp({
                 title: "CASTLE VEIN (COVER) ⧸⧸⧸ CHILD OF BLASPHEMY Feat. Kasane Teto ",
             },
             url: "https://file.garden/atWE_KEZunvJtot9/CASTLE%20VEIN%20(COVER)%20%E2%A7%B8%E2%A7%B8%E2%A7%B8%20CHILD%20OF%20BLASPHEMY%20Feat.%20Kasane%20Teto%20%5BthXUHWEJLYU%5D.mp3",
+
+        },
+        {
+            metaData: {
+                artist: "Itai The Maid",
+                title: "Promissa Terra",
+            },
+            url: "https://file.garden/atWE_KEZunvJtot9/Itai%20The%20Maid%20-%20Promissa%20Terra%20%5B1152999973%5D.mp3",
 
         },
     ]

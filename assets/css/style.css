@@ -261,6 +261,3 @@ input[type="file"]:active {
   border: none;
 }
 
-body:has(dialog#modal-window-image[open]) {
-  overflow: hidden;
-}
