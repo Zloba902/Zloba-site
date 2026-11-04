@@ -18,18 +18,21 @@ body.neco-arc {
 	background-image: none
 }
 
-body.box-column{
-	
-}
 
 h1 {
 	text-align: center;
 	font-size: 30px;
 }
 
+h2 {
+	text-align: center;
+	font-size: 20px;
+}
+
 body.neco-arc .box {
 	border: none;
 	position: relative;
+	text-align: start;
 	gap: 20px;
 }
 
@@ -40,17 +43,21 @@ body.neco-arc .box {
 }
 
 .photo {
+	padding: 10px;
 	animation: rotate 2.5s steps(2) infinite;
-	
+
 }
 
+
+
 @keyframes rotate {
-  from{
-	transform: rotate(5deg);
-  }
-  to{
-	transform: rotate(-15deg);
-  }
+	from {
+		transform: rotate(5deg);
+	}
+
+	to {
+		transform: rotate(-15deg);
+	}
 }
 
 
@@ -82,6 +89,37 @@ body.neco-arc .box {
 	top: -40px;
 	-webkit-animation-delay: 0s, 0s;
 	animation-delay: 0.4s, 0s
+}
+
+
+li::marker {
+	content: ""
+}
+
+li {
+	position: relative;
+	padding-left: 30px;
+	/* Место под декоратор */
+	padding-top: 10px;
+	margin-bottom: 0px;
+	transition: transform 0.05s linear;
+}
+
+li::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 25px;
+	height: 25px;
+	background-image: url('/assets/image/shrines/neco_arc/flug.gif');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+li:hover {
+	transform: scale(1.02); 
 }
 
 

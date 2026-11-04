@@ -58,13 +58,18 @@ body {
   flex-direction: row;
   gap: 20px;
   width: 100%;
-  padding-top: 15px;
+  padding-top: 10px;
 }
 
 .box-column {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#neco-links .p{
+  display: flex;
+  flex-direction: column;
 }
 
 

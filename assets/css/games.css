@@ -1,0 +1,239 @@
+.tier-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  max-width: 800px;
+  background: #1a1a1a;
+  padding: 10px;
+}
+
+.tier-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 5px;
+  width: 100%;
+  align-items: center;
+}
+
+.tier-row {
+  display: flex;
+  min-height: 80px;
+  background: #2b2b2b;
+}
+
+.tier-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  font-weight: bold;
+  font-size: 24px;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+
+.item {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  box-shadow: #1a1a1a;
+  perspective: 1000px;
+  z-index: 100;
+  transition: transform 0.05s linear;
+}
+
+
+@keyframes spin {
+  from {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+
+.floppy-3d-wrapper {
+  position: relative;
+  width: 150px;
+  height: 150px;
+
+  transform-style: preserve-3d;
+  transition: transform 0.4s linear;
+
+}
+
+.floppy-3d-wrapper:hover {
+    top: -10px;
+
+}
+
+.item.inserted .floppy-3d-wrapper {
+  transform: rotateX(80deg) scale3d(1,0.8,1);
+  transition: transform 0.5s ease-in-out;
+}
+
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* Чтобы задняя сторона не просвечивала сквозь переднюю */
+  backface-visibility: hidden;
+}
+
+.back {
+  background: #020202;
+  /* Просто темный пластик */
+  transform: rotateY(180deg) translateZ(0px);
+}
+
+.edge-right,
+.edge-bottom,
+.edge-top,
+.edge-left {
+  background: #9e0b0b;
+  /* Цвет пластика ребра */
+
+}
+
+.edge-right {
+  width: 3px;
+  height: 150px;
+  right: 0;
+  transform-origin: right center;
+  transform: rotateY(90deg);
+}
+
+.edge-left {
+  width: 3px;
+  height: 150px;
+  left: 0;
+  transform-origin: left center;
+  transform: rotateY(-90deg);
+}
+
+
+.edge-bottom {
+  width: 150px;
+  height: 3px;
+  bottom: 0;
+  transform-origin: center bottom;
+  transform: rotateX(-90deg);
+}
+
+.edge-top {
+  width: 150px;
+  /* Это и есть толщина нашей дискеты! */
+  height: 3px;
+  /* Высота совпадает с высотой дискеты */
+  top: 0;
+  /* Разворачиваем боком к пользователю */
+  transform-origin: center top;
+  transform: rotateX(90deg);
+}
+
+.front {
+  transform: translateZ(3px);
+  /* Выдвинули вперед */
+}
+
+
+.monitor {
+  background: #222;
+  padding: 25px;
+  border-radius: 30px;
+  /* Скругление самого корпуса */
+  box-shadow:
+    inset 0px 4px 10px rgba(255, 255, 255, 0.1),
+    0px 20px 50px rgba(0, 0, 0, 0.8);
+}
+
+#screen {
+  position: relative;
+  width: 500px;
+  height: 380px;
+  background: #141005;
+  /* Темно-зеленый подтон экрана */
+  border-radius: 40px / 30px;
+  /* Создает бочкообразную форму */
+  overflow: hidden;
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, 1);
+  border: 10px solid #1a1a1a;
+}
+
+#screen::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: radial-gradient(circle at center,
+      transparent 40%,
+      rgba(0, 0, 0, 0.4) 70%,
+      rgba(0, 0, 0, 0.8) 100%);
+  pointer-events: none;
+  /* Чтобы можно было выделять текст */
+  z-index: 3;
+}
+
+.scanlines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Рисуем мелкие горизонтальные полоски */
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%,
+      rgba(0, 0, 0, 0.35) 50%);
+  background-size: 100% 4px;
+  /* Шаг полос */
+  z-index: 2;
+  pointer-events: none;
+  animation: flicker 0.15s infinite;
+  /* Эффект дрожания ЭЛТ */
+}
+
+/* Контент внутри терминала */
+.content {
+  position: relative;
+  padding: 30px;
+  font-family: 'Courier New', Courier, monospace;
+  color: #ffb433;
+  /* Фосфорный зеленый */
+  /* Эффект свечения текста (размытие) */
+  text-shadow:
+    0 0 2px rgba(51, 255, 51, 0.5),
+    0 0 8px rgba(51, 255, 51, 0.3);
+  z-index: 1;
+}
+
+.disk {
+  background-color: #051405;
+
+}
+
+
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tier-label.s {
+  background-color: #ff7f7f;
+}
+
+.tier-label.a {
+  background-color: #ffbf7f;
+}
+
+.tier-label.b {
+  background-color: #ffdf7f;
+}
+
