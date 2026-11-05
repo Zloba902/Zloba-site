@@ -19,6 +19,13 @@ body {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'pixel';
+  src: url('../fonts/DOSFont.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+}
+
 /*Уникальные */
 
 #ofa {
@@ -67,7 +74,7 @@ body {
   align-items: center;
 }
 
-#neco-links .p{
+#neco-links .p {
   display: flex;
   flex-direction: column;
 }
