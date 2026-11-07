@@ -1,3 +1,10 @@
+
+:root 
+{ 
+  --metal: linear-gradient(135deg, #555, #fff 25%, #222 50%, #fff 75%, #555);
+}
+.metal { border: 1px solid; border-image: var(--metal) 1; }
+
 body {
   color: rgb(249, 248, 248);
   background-color: rgb(2, 0, 0);
@@ -87,12 +94,7 @@ body {
   font-size: 9px;
   background-color: #1b0101;
   border: 1px solid;
-  border-image: linear-gradient(135deg,
-      #555 0%,
-      #fff 25%,
-      #222 50%,
-      #fff 75%,
-      #555 100%) 1;
+  border-image: --metal;
   position: relative;
 }
 
