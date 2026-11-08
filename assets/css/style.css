@@ -4,8 +4,10 @@ body {
   background-image: url('/assets/image/purplerosesblkbg.gif');
  
   font-family: 'Alagard-12';
-
+ 
 }
+
+
 
 #wrapper-box {
   display: flex;
@@ -14,6 +16,13 @@ body {
   margin: 0px;
   box-sizing: border-box;
   gap: 10px;
+
+
+ @media  (max-width: 400px)
+ {
+  flex-direction: column;
+  width: 100%;
+ }
 }
 
 #main-box {
@@ -120,6 +129,11 @@ iframe {
       #555 100%) 1;
   /* Металлический кант */
   overflow: hidden;
+   @media  (max-width: 900px)
+ {
+  flex-direction: column;
+  width: 100%;
+ }
 }
 
 
