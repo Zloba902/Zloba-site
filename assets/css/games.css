@@ -99,9 +99,7 @@
 /*обзоры*/
 
 /*White cnkucle*/
-audio {
-  
-}
+audio {}
 
 body.white-knucle {
   font-family: pixel;
@@ -112,12 +110,13 @@ body.white-knucle {
 }
 
 body.white-knucle .box-rows {
-align-items: center;
-margin: 10px 0px;
+  align-items: center;
+  margin: 10px 0px;
 }
 
-@media (prefers-reduced-motion: reduce){
- *,
+@media (prefers-reduced-motion: reduce) {
+
+  *,
   *::before,
   *::after {
     animation-duration: 0.01ms !important;
@@ -128,21 +127,26 @@ margin: 10px 0px;
 
 }
 
-body.white-knucle mark{
+body.white-knucle mark {
   background-color: transparent;
   color: rgb(214, 185, 20);
 }
 
-body.white-knucle em span{
-  display:inline-block;
+body.white-knucle em span {
+  display: inline-block;
   background-color: transparent;
   color: rgb(214, 20, 20);
-  animation: wobble 0.5s steps(2) infinite; 
+  animation: wobble 0.5s steps(2) infinite;
 }
 
 @keyframes wobble {
-  25%  { transform: translate(0px, -1px);}
-  75%  { transform: translate(0px, 1px);}
+  25% {
+    transform: translate(0px, -1px);
+  }
+
+  75% {
+    transform: translate(0px, 1px);
+  }
 }
 
 body.white-knucle hgroup {
@@ -159,18 +163,21 @@ body.white-knucle h2 {
   font-size: 35px;
   margin: 10px 0px;
 
-  &::before{
+  &::before {
     content: ">";
     opacity: 0.5;
   }
 
-  &::after{
+  &::after {
     content: "_";
     animation: blink 1s steps(1) infinite;
   }
 }
+
 @keyframes blink {
-  50% {opacity: 0%}
+  50% {
+    opacity: 0%
+  }
 }
 
 
@@ -179,13 +186,13 @@ body.white-knucle p {
   margin: 5px;
 }
 
-body.white-knucle ul{
+body.white-knucle ul {
   margin: 5px 0px;
   font-size: 20px;
   list-style: "|";
 }
 
-#center-img{
+#center-img {
   align-items: center;
 
 }
@@ -202,7 +209,7 @@ body.white-knucle ul{
   }
 }
 
-#escape{
+#escape {
   font-size: 22px;
   text-align: center;
 }
@@ -211,6 +218,8 @@ body.white-knucle ul{
   padding: 0px;
   margin: 0px;
   position: relative;
+  width: fit-content;
+  height: fit-content;
   max-width: 500px;
 
   .card-header {
@@ -222,7 +231,8 @@ body.white-knucle ul{
     opacity: 0.5;
   }
 
-  img{
+  img {
+    
     max-width: 500px;
   }
 
