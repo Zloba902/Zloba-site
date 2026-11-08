@@ -99,6 +99,9 @@
 /*обзоры*/
 
 /*White cnkucle*/
+audio {
+  
+}
 
 body.white-knucle {
   font-family: pixel;
@@ -106,6 +109,11 @@ body.white-knucle {
   outline: 2px dashed rgb(214, 185, 20);
   border-color: rgb(214, 185, 20);
   outline-offset: -10px;
+}
+
+body.white-knucle .box-rows {
+align-items: center;
+margin: 10px 0px;
 }
 
 @media (prefers-reduced-motion: reduce){
@@ -129,15 +137,13 @@ body.white-knucle em span{
   display:inline-block;
   background-color: transparent;
   color: rgb(214, 20, 20);
-  animation: wobble 0.1s steps(2) infinite; 
+  animation: wobble 0.5s steps(2) infinite; 
 }
-
 
 @keyframes wobble {
   25%  { transform: translate(0px, -1px);}
   75%  { transform: translate(0px, 1px);}
 }
-
 
 body.white-knucle hgroup {
   text-align: center;
@@ -145,13 +151,13 @@ body.white-knucle hgroup {
 
 body.white-knucle h1 {
   font-size: 40px;
-  margin: 10px 0px;
+  margin: 0px 0px;
   text-align: center;
 }
 
 body.white-knucle h2 {
   font-size: 35px;
-  margin: 0px;
+  margin: 10px 0px;
 
   &::before{
     content: ">";
@@ -167,12 +173,22 @@ body.white-knucle h2 {
   50% {opacity: 0%}
 }
 
+
 body.white-knucle p {
   font-size: 20px;
-
+  margin: 5px;
 }
 
+body.white-knucle ul{
+  margin: 5px 0px;
+  font-size: 20px;
+  list-style: "|";
+}
 
+#center-img{
+  align-items: center;
+
+}
 
 
 .aberration {
@@ -186,12 +202,16 @@ body.white-knucle p {
   }
 }
 
+#escape{
+  font-size: 22px;
+  text-align: center;
+}
 
 .media-card {
   padding: 0px;
   margin: 0px;
   position: relative;
-  width: 500px;
+  max-width: 500px;
 
   .card-header {
     text-transform: uppercase;
@@ -202,15 +222,15 @@ body.white-knucle p {
     opacity: 0.5;
   }
 
-  img {
-    width: 500px;
-
+  img{
+    max-width: 500px;
   }
 
   .media-wrapper {
     position: relative;
     overflow: hidden;
     background: #000;
+    max-width: 500px;
 
     &::after {
       content: " ";
