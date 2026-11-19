@@ -36,6 +36,9 @@ let postsArray = [
 //[ "posts/2020-11-10-My-Second-Post-Example.html" ],
 //["posts/2026-19-11-First-Post.html" ], 
 
+
+
+["posts/2026-11-19.html"],
 ["posts/2026-11-09-Happy-birthday.html"],
 ["posts/2026-11-04-a-cry-from-the-soul.html"],
 ["posts/2026-10-26-Dream.html"],
@@ -45,9 +48,6 @@ let postsArray = [
 ["posts/2026-10-01-lassitude.html"],
 ["posts/2026-09-25-liminal-dream.html"],
 ["posts/2026-09-23-Towers.html"] 
-
-
-
 ];
 
 //XXXXXXXXXXXXXXXXXXXXXXXXXXXXX

@@ -3,14 +3,10 @@
    "how to change link color." */
 
 body {
-  background-color: rgba(23, 23, 23, 0.709);
+  background-color: rgb(0, 0, 0);
   color: #f2f6ff;
-  background-image: url('../images/bg_diamond.png');
   background-position: top;
   font-size: 10px;
-  backdrop-filter: blur(10px);
-
-  /* Уменьшит разрыв (стандартное значение обычно около 1.4–1.6) */
 
   font-family: 'MyCustomFont';
   margin: 0;
@@ -18,14 +14,9 @@ body {
 
 @font-face {
   font-family: 'MyCustomFont';
-  /* Задайте имя шрифту */
   src: url('../fonts/alagard-12px-unicode.woff2') format('woff2');
-  /* Путь к файлу */
   font-weight: 600;
-
-  /* Толщина шрифта */
   font-style: 10px;
-  /* Стиль (обычный или курсив) */
 }
 
 
