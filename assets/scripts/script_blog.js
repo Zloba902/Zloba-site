@@ -38,7 +38,7 @@ let postsArray = [
 
 
 
-["posts/2026-11-19.html"],
+["posts/2026-11-19-Sudden-Appearance.html"],
 ["posts/2026-11-09-Happy-birthday.html"],
 ["posts/2026-11-04-a-cry-from-the-soul.html"],
 ["posts/2026-10-26-Dream.html"],
@@ -145,9 +145,9 @@ function formatPostLink(i) {
     }
   }
   if (  postDateFormat.test ( postsArray[i][0].slice( 6,17 ) ) ) {
-    return '<li><a href="' + relativePath + '/'+ postsArray[i][0] +'">' + postsArray[i][0].slice(6,16) + " \u00BB " + postTitle_i + '</a></li>';
+    return '<li class = "sound-link"><a href="' + relativePath + '/'+ postsArray[i][0] +'">' + postsArray[i][0].slice(6,16) + " \u00BB " + postTitle_i + '</a></li>';
   } else {
-    return '<li><a href="' + relativePath + '/'+ postsArray[i][0] +'">' + postTitle_i + '</a></li>';
+    return '<li class = "sound-link"><a href="' + relativePath + '/'+ postsArray[i][0] +'">' + postTitle_i + '</a></li>';
   }
 }
 

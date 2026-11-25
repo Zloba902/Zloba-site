@@ -2,30 +2,131 @@
 <html>
 
 <head>
-   <meta charset="UTF-8">
+  <meta charset="UTF-8">
   <title>My Blog's Homepage</title>
   <link rel="icon" href="/assets/image/favicon.png" type="image/x-icon" />
   <!-- This helps our site look consistent across devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
   <!-- Here's the link to our CSS stylesheet! -->
+  <link href="/assets/css/main.css" rel="stylesheet" media="all">
   <link href="/assets/css/style_blog.css" rel="stylesheet" media="all">
 </head>
 
 <body>
+  <div class="preloader">
+    <p class="preload-text">Загрузка</p>
+  </div>
 
   <div id="content">
+    <h1 class="header">Zloba//blog</h1>
+    <p>Бредни шиза и просто разговоры не о чем</p>
 
-
-    <h1>Welcome to my blog!</h1>
-
-    <p>нужно переделать тут все назер </p>
-
-
-    <div id="recentpostlistdiv"></div>
-
+    <div class="post">
+      <div id="recentpostlistdiv"></div>
+    </div>
 
     <script src="/assets/scripts/script_blog.js"></script>
+
+    <script>
+
+
+      const AudioContext = window.AudioContext || window.webkitAudioContext;
+      let audioCtx;
+
+      function playTerminalHoverSound() {
+        if (!audioCtx) {
+          audioCtx = new AudioContext();
+        }
+        if (audioCtx.state === 'suspended') {
+          audioCtx.resume();
+        }
+
+        const oscillator = audioCtx.createOscillator();
+        const gainNode = audioCtx.createGain();
+
+        oscillator.type = 'square';
+
+        oscillator.frequency.setValueAtTime(150, audioCtx.currentTime);
+        oscillator.frequency.exponentialRampToValueAtTime(300, audioCtx.currentTime + 0.10);
+
+        gainNode.gain.setValueAtTime(0.05, audioCtx.currentTime);
+        gainNode.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.6);
+
+        oscillator.connect(gainNode);
+        gainNode.connect(audioCtx.destination);
+
+        oscillator.start();
+        oscillator.stop(audioCtx.currentTime + 0.03);
+      }
+
+
+
+
+      document.querySelectorAll('.sound-link').forEach(element => {
+        element.addEventListener('mouseenter', playTerminalHoverSound);
+      });
+
+
+      function playPreloadSound() {
+        const AudioCtx = window.AudioContext || window.webkitAudioContext;
+        const ctx = new AudioCtx();
+
+        // Ноты аккорда (в Гц): C4, E4, G4, B4, D5 (ретро-синт в духе 90-х)
+        const notes = [261.63, 329.63, 392.00, 493.88, 587.33];
+        const now = ctx.currentTime;
+
+        notes.forEach((freq, index) => {
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+
+          // 'triangle' дает мягкий 8-битный звук, 'square' — резкий писк спикера
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(freq, now + index * 0.12);
+
+          // Настройка громкости и плавного затухания
+          gain.gain.setValueAtTime(0.001, now + index * 0.12);
+          gain.gain.exponentialRampToValueAtTime(0.15, now + index * 0.12 + 0.05);
+          gain.gain.exponentialRampToValueAtTime(0.0001, now + index * 0.12 + 1.2);
+
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+
+          osc.start(now + index * 0.12);
+          osc.stop(now + index * 0.12 + 1.3);
+        });
+      }
+
+      
+
+
+      window.addEventListener('load', playPreloadSound);
+
+      const preloader = document.querySelector(".preloader")
+      const textOutput = document.querySelector(".preload-text"),
+        phrases = [
+          'Вход в пустоту',
+          'Это снова ты?',
+          'Серьезно загрузка так нужна здесь?',
+          'Почему ты ZLOBA?',
+          'Это кто-то читает?'
+        ],
+        delay = [2000, 500, 2000, 500];
+
+      phrases.forEach(function (phrase, i) {
+        const time = delay[i];
+        setTimeout(function () {
+          textOutput.textContent = phrase;
+        }, time);
+      });
+
+      setTimeout(function () {
+        preloader.classList.add('hiden')
+      }, 8000)
+
+
+
+    </script>
 </body>
 
 </html>

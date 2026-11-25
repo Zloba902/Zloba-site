@@ -1,22 +1,77 @@
-/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
-   HTML content. To learn how to do something, just try searching Google for questions like
-   "how to change link color." */
-
 body {
   background-color: rgb(0, 0, 0);
   color: #f2f6ff;
-  background-position: top;
-  font-size: 10px;
-
-  font-family: 'MyCustomFont';
+  font-size: 20px;
+  font-family: 'pixel';
   margin: 0;
 }
 
-@font-face {
-  font-family: 'MyCustomFont';
-  src: url('../fonts/alagard-12px-unicode.woff2') format('woff2');
-  font-weight: 600;
-  font-style: 10px;
+* {
+  margin: 0px;
+}
+
+:root {
+  --text-color: #eee;
+  --bg-color-start: rgb(136, 0, 221);
+  --bg-color-end: #003;
+
+}
+
+.preloader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(var(--bg-color-start), var(--bg-color-end));
+}
+
+.preloader::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image:
+    repeating-linear-gradient(transparent, rgba(0, 0, 0, 0.3) 0.25em);
+}
+
+.preloader.hiden {
+  display: none;
+}
+
+.preloader p {
+  font-size: 100px;
+  color: var(--text-color);
+  text-shadow: 0 0 0.030em var(--text-color);
+  text-transform: uppercase;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.preloader p::after {
+  position: absolute;
+  content: '';
+  animation: anim-preoader 2s linear infinite;
+}
+
+@keyframes anim-preoader {
+  25% {
+    content: '.';
+  }
+
+  50% {
+    content: '..';
+  }
+
+  75% {
+    content: '...';
+  }
+
 }
 
 
@@ -28,10 +83,7 @@ hr {
 
 img {
   display: block;
-  /* Превращаем в блок */
-  margin-left: auto;
-  /* Авто-отступ слева */
-  margin-right: auto;
+
 }
 
 .right {
@@ -65,13 +117,14 @@ img {
 }
 
 a {
-
-  transition: padding-left 0.2s ease-in;
+  color: #f2f6ff;
+  height: 100;
 }
 
-a:hover {
-  background-color: #fff6e6;
-  padding-left: 50px;
+li:hover {
+  background-color: #aa00f9;
+  box-shadow:  0 0 0.5em #aa00f9;
+  color: #000;
 }
 
 h1,
@@ -79,64 +132,77 @@ h2,
 h3,
 h4,
 h5 {
-
-  color: #f2f6ff;
+  color: #ae2dff;
 }
 
-h4 {
-
-  text-align: center;
+h1 {
+  text-shadow: 0 0 8px rgba(207, 113, 207, 0.637);
+  margin: 0px;
+  padding: 0px;
 }
 
+.head-blog {
+  border-bottom: #8b00b19d 2px double;
+  width: fit-content;
+}
+
+.post li {}
 
 /*#CONTAINER is the rectangle that contains everything but the background!*/
 #container {
-  margin: 3em auto;
-  width: 90%;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  align-items: center;
+
+  font-size: 22px;
 
   background-color: #fff4df00;
   color: #fdfcfc;
-  outline-style: ridge;
-  outline-width: 0px;
-  outline-offset: 0;
+}
+
+#container p {
+  color: #cccccc;
+  background: #000;
+  max-width: 720px;
+  line-height: 1.2;
+  padding: 10px;
+  border-top: 1px solid #af18e1;
+}
+
+#container h1 {
+  padding: 10px;
+}
+
+#container h1 {
+
+  &::before {
+    content: ">";
+    opacity: 0.5;
+  }
+
+  &::after {
+    content: "_";
+    animation: blink 1s steps(1) infinite;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0%
+  }
+}
+
+#container h1,
+h2,
+h3,
+h4,
+h5 {
+  padding: 10px;
 }
 
 #content {
   padding: 10px 5% 20px 5%;
-}
-
-
-/*HEADER STYLE*/
-#header {
-  background-color: #999ca700;
-  padding: 0 5%;
-  border-style: ridge;
-  border-width: 0 0 4px 0;
-}
-
-#header ul {
-  list-style-type: none;
-  padding: 0.5em 0;
-  margin: 0;
-}
-
-#header li {
-  font-size: 8px;
-  display: inline-block;
-  margin-right: 1.5em;
-  margin-bottom: 0.2em;
-  margin-top: 0.2em;
-}
-
-#header li a {
-  color: white;
-  text-decoration: none;
-  background-color: inherit;
-}
-
-#header li a:hover {
-  text-decoration: underline;
-  transform: scale(1.2);
 }
 
 /*POST LIST STYLE*/
@@ -147,17 +213,12 @@ h4 {
 }
 
 
-
-
-
 #recentpostlistdiv ul {
   font-size: 1.2em;
   padding: 0;
   list-style-type: none;
 
 }
-
-
 
 .moreposts {
   font-size: 0.8em;
@@ -181,6 +242,6 @@ h4 {
   padding: 0 5% 10px 5%;
 }
 
-.comment{
-color:blueviolet
+.comment {
+  color: blueviolet
 }
