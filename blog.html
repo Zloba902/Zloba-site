@@ -20,7 +20,7 @@
 
   <div id="content">
     <h1 class="header">Zloba//blog</h1>
-    <p>Бредни шиза и просто разговоры не о чем</p>
+    <p>Приветствую. Тут я просто делюсь мыслями </p>
 
     <div class="post">
       <div id="recentpostlistdiv"></div>
@@ -106,12 +106,12 @@
       const textOutput = document.querySelector(".preload-text"),
         phrases = [
           'Вход в пустоту',
-          'Это снова ты?',
-          'Серьезно загрузка так нужна здесь?',
-          'Почему ты ZLOBA?',
-          'Это кто-то читает?'
+          'кто здесь?',
+          'privet paket',
+          'Загрузка? серьезно??',
+          'Загрузка пространства'
         ],
-        delay = [2000, 500, 2000, 500];
+        delay = [500, 1000, 1200 , 1500, 2000];
 
       phrases.forEach(function (phrase, i) {
         const time = delay[i];
@@ -122,7 +122,7 @@
 
       setTimeout(function () {
         preloader.classList.add('hiden')
-      }, 8000)
+      }, 4000)
 
 
 
